@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Panduan Senjata Monster Hunter Outlanders (Fan-made)</title>
+<meta name="description" content="Panduan lengkap 8 senjata Monster Hunter Outlanders: mekanik, kelebihan, kekurangan, combo, perbandingan interaktif, dan rekomendasi playstyle. Bahasa Indonesia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>
+(function(){try{var t=localStorage.getItem('mho-theme');if(!t){t=(window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches)?'light':'dark';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
+</script>
+<style>
+:root{
+  --bg:#0e1116;--bg2:#141922;--card:#1a212b;--card2:#202938;--line:#2c3644;
+  --text:#e9eef4;--muted:#9aa8b8;--accent:#f2a33a;--accent-ink:#1a1204;--accent2:#4cc3a7;
+  --danger:#ef6a5b;--ok:#5fd08a;--warn:#e9c45a;
+  --chip-a:#3b4a60;--chip-s1:#1f6f63;--chip-s2:#8a5a12;--chip-s3:#8b3a52;--chip-ev:#2d6a3c;--chip-sh:#4b5563;--chip-pe:#2b5fa8;--chip-x:#2a3340;
+  --shadow:0 8px 28px rgba(0,0,0,.35);
+  --radius:16px;--nav-h:58px;
+}
+:root[data-theme="light"]{
+  --bg:#f6f3ec;--bg2:#ece7da;--card:#ffffff;--card2:#f4efe3;--line:#ddd5c2;
+  --text:#1b2027;--muted:#5b6675;--accent:#c46f08;--accent-ink:#fff;--accent2:#0e8a73;
+  --danger:#c4382a;--ok:#1f8a4a;--warn:#9a7410;
+  --chip-a:#5f7392;--chip-s1:#2a8f80;--chip-s2:#b87a1c;--chip-s3:#b84b69;--chip-ev:#3f8a52;--chip-sh:#7b8594;--chip-pe:#3d78c6;--chip-x:#d9d1bd;
+  --shadow:0 8px 24px rgba(60,50,20,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;line-height:1.6;-webkit-text-size-adjust:100%}
+h1,h2,h3,h4{font-family:'Barlow Condensed','Inter',sans-serif;letter-spacing:.3px;line-height:1.15;margin:0 0 .5em}
+h1{font-size:clamp(2.4rem,6vw,4.2rem)}
+h2{font-size:clamp(1.8rem,4vw,2.6rem)}
+h3{font-size:1.5rem}
+p{margin:0 0 1em}
+a{color:var(--accent2)}
+button{font:inherit;color:inherit;cursor:pointer}
+.wrap{width:min(1180px,100% - 32px);margin-inline:auto}
+section{padding:72px 0;scroll-margin-top:calc(var(--nav-h) + 8px)}
+.sec-head{margin-bottom:28px;max-width:760px}
+.sec-head p{color:var(--muted)}
+.eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--accent2);outline-offset:2px;border-radius:6px}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);height:var(--nav-h)}
+.nav .wrap{display:flex;align-items:center;gap:14px;height:100%}
+.brand{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.25rem;white-space:nowrap;color:var(--text);text-decoration:none}
+.brand b{color:var(--accent)}
+.nav-links{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;flex:1;padding:4px 0}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{white-space:nowrap;text-decoration:none;color:var(--muted);padding:8px 12px;border-radius:999px;font-size:.92rem;font-weight:500;transition:.2s}
+.nav-links a:hover{color:var(--text);background:var(--card)}
+.nav-links a.active{background:var(--accent);color:var(--accent-ink);font-weight:700}
+.icon-btn{border:1px solid var(--line);background:var(--card);border-radius:999px;width:40px;height:40px;display:grid;place-items:center;font-size:1.1rem;flex:none}
+.icon-btn:hover{border-color:var(--accent)}
+
+/* HERO */
+.hero{padding:72px 0 56px;position:relative;overflow:hidden;background:
+  radial-gradient(900px 400px at 85% -10%,color-mix(in srgb,var(--accent) 26%,transparent),transparent 70%),
+  radial-gradient(700px 380px at 0% 110%,color-mix(in srgb,var(--accent2) 20%,transparent),transparent 70%)}
+.hero p.lead{font-size:1.15rem;color:var(--muted);max-width:660px}
+.hero h1 span{color:var(--accent)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 18px}
+.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--card);padding:11px 18px;border-radius:12px;text-decoration:none;color:var(--text);font-weight:600;font-size:.95rem;transition:.2s}
+.btn:hover{transform:translateY(-2px);border-color:var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:4px 11px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-size:.8rem;color:var(--muted)}
+.pill.lv-pemula{color:var(--ok);border-color:color-mix(in srgb,var(--ok) 45%,var(--line))}
+.pill.lv-menengah{color:var(--warn);border-color:color-mix(in srgb,var(--warn) 45%,var(--line))}
+.pill.lv-mahir{color:var(--danger);border-color:color-mix(in srgb,var(--danger) 45%,var(--line))}
+.notice{border:1px solid color-mix(in srgb,var(--warn) 50%,var(--line));background:color-mix(in srgb,var(--warn) 10%,var(--card));border-radius:12px;padding:12px 16px;font-size:.9rem;margin-top:22px;max-width:820px}
+.vbadge{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:2px 7px;border-radius:6px;background:color-mix(in srgb,var(--warn) 22%,transparent);color:var(--warn);border:1px solid color-mix(in srgb,var(--warn) 55%,transparent);vertical-align:middle;white-space:nowrap}
+
+/* CARDS / GRID */
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+.card h4{font-size:1.2rem;margin-bottom:.35em}
+.card p:last-child{margin-bottom:0}
+.steps{counter-reset:s;display:grid;gap:14px}
+.step{display:flex;gap:14px;align-items:flex-start}
+.step::before{counter-increment:s;content:counter(s);flex:none;width:34px;height:34px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-weight:700}
+dl.gloss{margin:0;display:grid;gap:10px}
+dl.gloss div{border-left:3px solid var(--accent2);padding-left:12px}
+dl.gloss dt{font-weight:700}
+dl.gloss dd{margin:0;color:var(--muted);font-size:.93rem}
+
+/* PICKER */
+.picker{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 14px}
+.chipbtn{border:1px solid var(--line);background:var(--card2);padding:8px 14px;border-radius:999px;font-size:.88rem;font-weight:500;transition:.15s}
+.chipbtn:hover{border-color:var(--accent)}
+.chipbtn[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:700}
+.picker-out{min-height:54px}
+.link-chip{display:inline-block;margin:3px 6px 3px 0;padding:4px 12px;border-radius:999px;background:color-mix(in srgb,var(--accent2) 18%,transparent);border:1px solid color-mix(in srgb,var(--accent2) 50%,transparent);color:var(--text);text-decoration:none;font-size:.86rem;font-weight:600;cursor:pointer}
+.link-chip:hover{background:color-mix(in srgb,var(--accent2) 32%,transparent)}
+
+/* TOOLBAR */
+.toolbar{position:sticky;top:calc(var(--nav-h) + 6px);z-index:30;background:color-mix(in srgb,var(--bg2) 92%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:14px;padding:12px 14px;display:grid;gap:10px;margin-bottom:22px}
+.searchbox{position:relative}
+.searchbox input{width:100%;padding:11px 40px 11px 40px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--text);font:inherit}
+.searchbox input:focus{outline:none;border-color:var(--accent2)}
+.searchbox .ico{position:absolute;left:13px;top:50%;transform:translateY(-50%);opacity:.7}
+.searchbox .clr{position:absolute;right:8px;top:50%;transform:translateY(-50%);border:0;background:transparent;font-size:1.1rem;padding:4px 8px;color:var(--muted)}
+.filters{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center}
+.fgroup{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.fgroup .lbl{font-size:.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-right:2px}
+.result-count{font-size:.88rem;color:var(--muted)}
+
+/* WEAPON CARD */
+.weapons{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(min(100%,520px),1fr))}
+.wcard{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;scroll-margin-top:calc(var(--nav-h) + 90px)}
+.wcard.flash{animation:flash 1.4s ease}
+@keyframes flash{0%,100%{box-shadow:var(--shadow)}30%{box-shadow:0 0 0 3px var(--accent),var(--shadow)}}
+.whead{display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 20%,var(--card2)),var(--card2));border-bottom:1px solid var(--line)}
+.wico{font-size:2.6rem;width:70px;height:70px;border-radius:18px;display:grid;place-items:center;background:var(--card);border:1px solid var(--line);flex:none}
+.whead h3{margin:0;font-size:1.9rem}
+.whead .en{color:var(--muted);font-size:.85rem}
+.wbadges{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.wbody{padding:20px 22px;display:grid;gap:18px}
+.stats{display:grid;gap:8px}
+.stat{display:grid;grid-template-columns:92px 1fr 26px;align-items:center;gap:10px;font-size:.88rem}
+.stat span:first-child{color:var(--muted)}
+.stat b{text-align:right}
+.bar{height:10px;border-radius:99px;background:color-mix(in srgb,var(--line) 80%,transparent);overflow:hidden}
+.bar i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--accent2),var(--accent));transition:width 1s cubic-bezier(.2,.8,.2,1)}
+.bar.go i{width:calc(var(--v) * 10%)}
+.statnote{font-size:.76rem;color:var(--muted)}
+.pc{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:560px){.pc{grid-template-columns:1fr}.stat{grid-template-columns:80px 1fr 24px}}
+.pc h5{margin:0 0 6px;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase}
+.pc .pro h5{color:var(--ok)}.pc .con h5{color:var(--danger)}
+.pc ul{margin:0;padding-left:18px;font-size:.92rem}
+.pc li{margin-bottom:4px}
+.fit{display:grid;gap:6px;font-size:.92rem}
+.fit div{display:flex;gap:8px;flex-wrap:wrap;align-items:baseline}
+.fit strong{min-width:110px;color:var(--muted);font-weight:600}
+details.mech{border:1px solid var(--line);border-radius:12px;background:var(--card2)}
+details.mech>summary{padding:11px 14px;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between}
+details.mech>summary::after{content:'+';font-size:1.2rem;color:var(--accent)}
+details.mech[open]>summary::after{content:'–'}
+details.mech>summary::-webkit-details-marker{display:none}
+.mech-list{padding:0 14px 12px;display:grid;gap:10px}
+.mech-list div{font-size:.92rem}
+.mech-list b{color:var(--accent)}
+.wfoot{display:flex;flex-wrap:wrap;gap:8px;padding:0 22px 20px;margin-top:auto}
+.empty{border:1px dashed var(--line);border-radius:14px;padding:30px;text-align:center;color:var(--muted)}
+
+/* COMBO */
+.wpills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px;border-bottom:1px solid var(--line);padding-bottom:10px}
+.tab{border:1px solid var(--line);background:var(--card);padding:8px 16px;border-radius:10px;font-weight:600;font-size:.9rem}
+.tab[aria-selected="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.combos{display:grid;gap:16px}
+.combo{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 20px}
+.combo-top{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;margin-bottom:6px}
+.combo h4{margin:0;font-size:1.35rem}
+.combo .syarat{font-size:.85rem;color:var(--muted);margin-bottom:8px}
+.chain{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:10px 0 14px}
+.chip{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;min-width:64px;padding:7px 12px;border-radius:10px;color:#fff;font-weight:700;font-size:.85rem;line-height:1.2;text-align:center;border:1px solid rgba(255,255,255,.12)}
+.chip small{font-weight:500;font-size:.7rem;opacity:.9;margin-top:1px;max-width:150px}
+.chip.a{background:var(--chip-a)}.chip.s1{background:var(--chip-s1)}.chip.s2{background:var(--chip-s2)}.chip.s3{background:var(--chip-s3)}
+.chip.ev{background:var(--chip-ev)}.chip.pe{background:var(--chip-pe)}.chip.sh{background:var(--chip-sh)}
+.chip.x{background:var(--chip-x);color:var(--text);border-style:dashed}
+.arrow{color:var(--muted);font-weight:700}
+.cmeta{display:grid;gap:6px;font-size:.92rem}
+.cmeta div{display:flex;gap:8px;flex-wrap:wrap}
+.cmeta strong{min-width:84px;color:var(--muted);font-weight:600}
+.lvtag{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:3px 9px;border-radius:99px}
+.lvtag.pemula{background:color-mix(in srgb,var(--ok) 22%,transparent);color:var(--ok)}
+.lvtag.standar{background:color-mix(in srgb,var(--warn) 22%,transparent);color:var(--warn)}
+.lvtag.lanjutan{background:color-mix(in srgb,var(--danger) 22%,transparent);color:var(--danger)}
+.goal{display:inline-block;padding:2px 9px;border-radius:99px;background:var(--card2);border:1px solid var(--line);font-size:.8rem}
+.legend{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px;font-size:.8rem;color:var(--muted);align-items:center}
+.legend .chip{min-width:0;padding:3px 9px;font-size:.74rem;flex-direction:row}
+.qnote{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px;font-size:.92rem;color:var(--muted)}
+
+/* TABLE */
+.twrap{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--card);box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;min-width:820px;font-size:.92rem}
+th,td{padding:11px 12px;text-align:center;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left;position:sticky;left:0;background:var(--card);z-index:1}
+thead th{background:var(--card2);white-space:nowrap}
+thead th button{background:none;border:0;font-weight:700;display:inline-flex;gap:5px;align-items:center;padding:2px 4px}
+thead th button .ar{opacity:.35;font-size:.8em}
+thead th[aria-sort="ascending"] .ar,thead th[aria-sort="descending"] .ar{opacity:1;color:var(--accent)}
+tbody tr:hover td{background:color-mix(in srgb,var(--accent) 7%,var(--card))}
+tbody tr:last-child td{border-bottom:0}
+.cell{display:inline-block;min-width:34px;padding:3px 8px;border-radius:8px;font-weight:700;color:#0b0f14}
+.tip{font-size:.85rem;color:var(--muted);margin:10px 2px 0}
+
+/* COMPARE */
+.cmp-pick{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:34px 0 16px}
+.cmp-pick select{padding:10px 14px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--text);font:inherit;min-width:190px}
+.cmp-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:620px){.cmp-grid{grid-template-columns:1fr}}
+.cmp-col{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+.cmp-col h4{display:flex;gap:10px;align-items:center;font-size:1.5rem}
+.cmp-row{display:grid;grid-template-columns:90px 1fr 30px;gap:8px;align-items:center;margin:9px 0;font-size:.88rem}
+.cmp-row.win b{color:var(--ok)}
+.cmp-row.lose b{color:var(--muted)}
+.cmp-info{display:grid;gap:6px;font-size:.9rem;margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
+.cmp-sum{margin-top:16px}
+
+/* BUILD */
+.bcard h4{display:flex;gap:10px;align-items:center}
+.bcard h4 span{font-size:1.5rem}
+
+/* FAQ */
+.faq{display:grid;gap:10px;max-width:860px}
+.qa{border:1px solid var(--line);border-radius:14px;background:var(--card);overflow:hidden}
+.qa button{width:100%;text-align:left;background:none;border:0;padding:16px 18px;font-weight:700;display:flex;justify-content:space-between;gap:14px;align-items:center}
+.qa button::after{content:'+';font-size:1.4rem;color:var(--accent);transition:transform .2s;flex:none}
+.qa button[aria-expanded="true"]::after{transform:rotate(45deg)}
+.qa .ans{display:grid;grid-template-rows:0fr;transition:grid-template-rows .25s ease}
+.qa .ans>div{overflow:hidden}
+.qa .ans p{padding:0 18px 16px;margin:0;color:var(--muted)}
+.qa.open .ans{grid-template-rows:1fr}
+
+/* FOOTER */
+footer{border-top:1px solid var(--line);background:var(--bg2);padding:44px 0 90px;font-size:.9rem;color:var(--muted)}
+footer h4{color:var(--text);font-size:1.15rem}
+footer ul{padding-left:18px;margin:0}
+footer .foot-grid{display:grid;gap:26px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.dataNote{display:inline-block;margin-top:14px;padding:10px 14px;border-radius:10px;border:1px solid color-mix(in srgb,var(--warn) 55%,var(--line));background:color-mix(in srgb,var(--warn) 10%,transparent);color:var(--text);font-weight:600}
+
+/* TOP BUTTON */
+#toTop{position:fixed;right:18px;bottom:18px;z-index:60;width:46px;height:46px;border-radius:50%;border:0;background:var(--accent);color:var(--accent-ink);font-size:1.3rem;font-weight:700;box-shadow:var(--shadow);opacity:0;transform:translateY(14px);pointer-events:none;transition:.25s}
+#toTop.show{opacity:1;transform:none;pointer-events:auto}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+  .bar i{width:calc(var(--v) * 10%)}
+}
+@media(max-width:640px){section{padding:54px 0}.brand span{display:none}.whead{padding:16px}.wbody{padding:16px}.wfoot{padding:0 16px 16px}}
+</style>
+</head>
+<body>
+
+<header class="nav" role="banner">
+  <div class="wrap">
+    <a class="brand" href="#beranda" aria-label="Ke bagian atas">MH<b>O</b> <span>Panduan Senjata</span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Navigasi bagian">
+      <a href="#pengantar" data-sec="pengantar">Pengantar</a>
+      <a href="#senjata" data-sec="senjata">Senjata</a>
+      <a href="#combo" data-sec="combo">Combo</a>
+      <a href="#perbandingan" data-sec="perbandingan">Perbandingan</a>
+      <a href="#build" data-sec="build">Build</a>
+      <a href="#faq" data-sec="faq">FAQ</a>
+    </nav>
+    <button class="icon-btn" id="themeBtn" type="button" aria-label="Ganti mode gelap/terang" title="Ganti mode gelap/terang">🌙</button>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="beranda" style="padding-top:72px">
+  <div class="wrap">
+    <span class="eyebrow">Fan-made · Bahasa Indonesia</span>
+    <h1>Panduan Senjata<br><span>Monster Hunter Outlanders</span></h1>
+    <p class="lead">Semua 8 tipe senjata di game mobile Outlanders: gaya bermain, mekanik khusus, kelebihan &amp; kekurangan, combo efektif dengan urutan input, perbandingan interaktif, dan rekomendasi untuk berbagai situasi hunt.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#senjata">⚔️ Lihat Semua Senjata</a>
+      <a class="btn" href="#combo">🔗 Combo Efektif</a>
+      <a class="btn" href="#perbandingan">📊 Bandingkan Senjata</a>
+      <a class="btn" href="#build">🎯 Rekomendasi Build</a>
+      <a class="btn" href="#faq">❓ FAQ</a>
+    </div>
+    <div class="hero-meta">
+      <span class="pill">📅 Data diperiksa 11 Nov 2026</span>
+      <span class="pill">🗡️ 8 tipe senjata</span>
+      <span class="pill">📱 iOS &amp; Android</span>
+    </div>
+    <div class="notice" role="note">
+      <strong>Soal akurasi:</strong> nama skill, urutan input, dan mekanik di bawah dirangkum dari panduan komunitas yang mengacu pada versi game bahasa Inggris. Skor bar 1–10 <u>bukan data resmi</u>; itu penilaian kualitatif panduan ini. Bagian yang belum bisa dipastikan diberi label <span class="vbadge">Perlu verifikasi</span>.
+    </div>
+  </div>
+</section>
+
+<!-- PENGANTAR -->
+<section id="pengantar">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Dasar-dasar</span>
+      <h2>Pengantar: Cara Kerja Sistem Senjata</h2>
+      <p>Outlanders menerjemahkan sistem 14 senjata seri utama ke layar sentuh. Di peluncuran, tersedia 8 tipe senjata, dan developer menyatakan akan menambah tipe lain lewat update.</p>
+    </div>
+
+    <div class="grid g2">
+      <div class="card">
+        <h3>Alur dasar</h3>
+        <div class="steps">
+          <div class="step"><div><strong>Senjata + Adventurer.</strong> Tiap senjata dipasangkan dengan Adventurer tertentu. Senjata menentukan kerangka gerakan, Adventurer menentukan spesialisasi dan skill-nya.</div></div>
+          <div class="step"><div><strong>Fated Adventurer (karakter utamamu).</strong> Satu-satunya yang bisa memakai <em>semua</em> tipe senjata dan memilih tipe Assault, Disruptor, atau Support. Elemen berasal dari senjata yang kamu pakai.</div></div>
+          <div class="step"><div><strong>Tombol aksi.</strong> Hampir semua senjata dikendalikan lewat Serangan Dasar, Skill 1, Skill 2, Skill 3, Evade, Sarungkan, dan Ultimate. Fungsi tiap tombol berbeda per senjata.</div></div>
+          <div class="step"><div><strong>Mode kontrol.</strong> Ada mode sederhana 3 tombol (serang, evade, spesial) untuk pemula, dan mode penuh yang meniru kontrol seri utama. <span class="vbadge">Perlu verifikasi</span> nama resminya: sumber menyebut "Starter/Adventure" atau "Starting/Hunting" atau "Classic".</div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Istilah dasar</h3>
+        <dl class="gloss">
+          <div><dt>Gauge / Energi khusus</dt><dd>Meter unik tiap senjata: Spirit Gauge (Long Sword), Demon Gauge (Dual Blades), Sword Energy &amp; vial (Charge Blade), dragon vial (Bow), dan seterusnya.</dd></div>
+          <div><dt>Stamina</dt><dd>Banyak aksi memakai stamina, mis. Demon Mode, Slide Shot Bow, Dash Attack &amp; Power Guard Lance.</dd></div>
+          <div><dt>Perfect Evade</dt><dd>Evade yang ditekan tepat sebelum serangan monster mengenai. Berlaku juga untuk roar. Setiap senjata punya hadiah berbeda (counter, jaga charge, dll.).</dd></div>
+          <div><dt>Perfect Guard</dt><dd>Guard tepat waktu pada senjata yang bisa guard (Lance, Heavy Bowgun, Charge Blade, Great Sword).</dd></div>
+          <div><dt>Sharpness</dt><dd>Hanya senjata jarak dekat. Urutan warna: Merah, Oranye, Kuning, Hijau, Biru, Putih, Ungu.</dd></div>
+          <div><dt>Affinity &amp; Elemen</dt><dd>Affinity memengaruhi peluang critical. Senjata bisa membawa elemen atau status di atas Physical Attack.</dd></div>
+          <div><dt>Motion value</dt><dd>Angka damage per gerakan tidak ditampilkan secara resmi di sumber yang saya temukan. <span class="vbadge">Perlu verifikasi</span> — karena itu guide ini tidak mencantumkan angkanya.</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:18px">
+      <h3>Tips memilih senjata</h3>
+      <ul style="margin:0 0 10px;padding-left:20px">
+        <li>Pilih berdasarkan <strong>ritme</strong> yang kamu suka, bukan hanya peringkat. Selisih performa antar senjata tidak ekstrem, dan peringkat komunitas berbeda-beda.</li>
+        <li>Mau main aman? Mulai dari senjata jarak jauh atau yang bisa guard. Mau agresif? Coba senjata cepat.</li>
+        <li>Jangan lupa Fated Adventurer bisa ganti senjata kapan saja. Coba beberapa sebelum menginvestasikan material.</li>
+        <li>Pasangkan elemen senjata dengan kelemahan monster. Elemen Fated Adventurer mengikuti senjata yang dipakai.</li>
+      </ul>
+      <strong>Rekomendasi cepat — saya ingin bermain yang...</strong>
+      <div class="picker" id="picker" role="group" aria-label="Preferensi bermain"></div>
+      <div class="picker-out" id="pickerOut" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SENJATA -->
+<section id="senjata" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">8 tipe senjata</span>
+      <h2>Daftar Senjata</h2>
+      <p>Cari senjata atau combo, lalu saring berdasarkan tingkat kesulitan dan peran. Pencarian juga memfilter bagian Combo.</p>
+    </div>
+
+    <div class="toolbar">
+      <div class="searchbox">
+        <span class="ico" aria-hidden="true">🔎</span>
+        <label class="sr" for="q">Cari senjata dan combo</label>
+        <input id="q" type="search" placeholder="Cari senjata atau combo… (mis. 'counter', 'Demon', 'Perfect Guard')" autocomplete="off">
+        <button class="clr" id="qClear" type="button" aria-label="Hapus pencarian" hidden>✕</button>
+      </div>
+      <div class="filters">
+        <div class="fgroup" id="fLvl" role="group" aria-label="Filter tingkat kesulitan"><span class="lbl">Kesulitan</span></div>
+        <div class="fgroup" id="fRole" role="group" aria-label="Filter peran"><span class="lbl">Peran</span></div>
+        <span class="result-count" id="resCount" aria-live="polite"></span>
+      </div>
+    </div>
+
+    <div class="weapons" id="weaponGrid"></div>
+  </div>
+</section>
+
+<!-- COMBO -->
+<section id="combo">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Urutan input</span>
+      <h2>Combo Efektif</h2>
+      <p>Pilih senjata dan tingkat combo. Chip menunjukkan urutan tombol dari kiri ke kanan. Nama gerakan memakai istilah versi Inggris game.</p>
+    </div>
+    <div class="legend" aria-label="Legenda chip">
+      <span>Legenda:</span>
+      <span class="chip a">Serangan Dasar</span><span class="chip s1">Skill 1</span><span class="chip s2">Skill 2</span><span class="chip s3">Skill 3</span><span class="chip ev">Evade</span><span class="chip pe">Perfect Evade/Guard</span><span class="chip sh">Sarungkan</span><span class="chip x">Kondisi/Catatan</span>
+    </div>
+    <div class="notice" style="margin:0 0 18px"><strong>Catatan:</strong> pengelompokan Pemula / Standar / Lanjutan adalah penilaian panduan ini. Urutan input dan nama gerakan dirangkum dari panduan komunitas (GameWith, diperbarui 2–8 Nov 2026) dan dicek hanya sampai tanggal tersebut. Setelah update game, urutan bisa berubah.</div>
+    <div class="wpills" id="comboWeapons" role="tablist" aria-label="Pilih senjata"></div>
+    <div class="tabs" id="comboTabs" role="tablist" aria-label="Tingkat combo"></div>
+    <div id="comboQNote"></div>
+    <div class="combos" id="comboList"></div>
+  </div>
+</section>
+
+<!-- PERBANDINGAN -->
+<section id="perbandingan" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Interaktif</span>
+      <h2>Perbandingan Senjata</h2>
+      <p>Klik judul kolom untuk mengurutkan. Skor 1–10 adalah penilaian editorial berdasarkan deskripsi di sumber, bukan angka resmi game <span class="vbadge">Perlu verifikasi</span>.</p>
+    </div>
+    <div class="twrap"><table id="cmpTable" aria-describedby="tblTip"></table></div>
+    <p class="tip" id="tblTip">Tip: klik judul kolom sekali untuk urut turun (angka) atau naik (nama), klik lagi untuk membalik.</p>
+
+    <h3 class="cmp-pick" style="margin-bottom:0;margin-top:40px">Bandingkan 2 senjata berdampingan</h3>
+    <div class="cmp-pick">
+      <label for="selA" class="sr">Senjata A</label><select id="selA"></select>
+      <span aria-hidden="true">⚔️ vs</span>
+      <label for="selB" class="sr">Senjata B</label><select id="selB"></select>
+      <button class="btn" type="button" id="swapBtn">⇄ Tukar</button>
+    </div>
+    <div class="cmp-grid" id="cmpOut" aria-live="polite"></div>
+    <div class="card cmp-sum" id="cmpSum"></div>
+  </div>
+</section>
+
+<!-- BUILD -->
+<section id="build">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Playstyle</span>
+      <h2>Rekomendasi Build / Playstyle</h2>
+      <p>Panduan singkat per situasi hunt. Saya sengaja tidak menyebut kelemahan monster tertentu karena belum bisa diverifikasi lengkap. Cek halaman monster di wiki yang kamu pakai.</p>
+    </div>
+    <div class="grid g2" id="buildGrid"></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="background:var(--bg2)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Pertanyaan umum</span>
+      <h2>FAQ</h2>
+    </div>
+    <div class="faq" id="faqList"></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Disclaimer</h4>
+        <p>Situs ini <strong>fan-made</strong> dan <strong>bukan situs resmi</strong>. Monster Hunter adalah merek dagang Capcom. Monster Hunter Outlanders dikembangkan TiMi Studio Group di bawah lisensi Capcom dan diterbitkan oleh Level Infinite (Garena di Asia Tenggara). Tidak ada afiliasi dengan pihak-pihak tersebut.</p>
+        <span class="dataNote">⚠️ Data bisa berubah seiring update game.</span>
+      </div>
+      <div>
+        <h4>Sumber rujukan (dicek 11 Nov 2026)</h4>
+        <ul>
+          <li><a href="https://gamewith.ai/monster-hunter-outlanders/en/articles/great-sword-guide" target="_blank" rel="noopener">GameWith — panduan per senjata (Great Sword, Long Sword, Dual Blades, Hammer, Lance, Heavy Bowgun, Bow, Charge Blade)</a></li>
+          <li><a href="https://gamewith.ai/monster-hunter-outlanders/en/articles/perfect-evade" target="_blank" rel="noopener">GameWith — Perfect Evade</a></li>
+          <li><a href="https://monsterhunteroutlanders.wiki.fextralife.com/Weapons" target="_blank" rel="noopener">Fextralife Wiki — Weapons</a></li>
+          <li><a href="https://thegameswiki.com/monster-hunter-outlanders/wiki/weapons" target="_blank" rel="noopener">The Games Wiki — Weapons</a></li>
+          <li><a href="https://www.pockettactics.com/monster-hunter-outlanders/weapons" target="_blank" rel="noopener">Pocket Tactics — Weapons</a></li>
+          <li><a href="https://www.invenglobal.com/articles/26853/two-control-modes-and-an-original-elder-dragon-hands-on-with-monster-hunter-outlanders" target="_blank" rel="noopener">INVEN Global — mode kontrol</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Cara membaca label</h4>
+        <p><span class="vbadge">Perlu verifikasi</span> = detail belum bisa dipastikan dari sumber. Jangan jadikan acuan sebelum dicek langsung di game.</p>
+        <p>Skor bar 1–10 = penilaian kualitatif panduan ini berdasarkan deskripsi sumber, bukan statistik game.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" type="button" aria-label="Kembali ke atas" title="Kembali ke atas">↑</button>
+
+<noscript><p style="padding:20px;text-align:center">Halaman ini memerlukan JavaScript untuk menampilkan daftar senjata dan fitur interaktif.</p></noscript>
+
+<script>
+(function(){
+'use strict';
+
+/* ---------- Helpers ---------- */
+var $=function(s,r){return (r||document).querySelector(s)};
+var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+var norm=function(s){return String(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')};
+var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+var VB='<span class="vbadge" title="Detail ini belum bisa dipastikan dari sumber">Perlu verifikasi</span>';
+
+/* ---------- Data ---------- */
+var STAT_KEYS=[['dmg','Damage'],['spd','Kecepatan'],['rng','Jangkauan'],['mob','Mobilitas'],['def','Pertahanan'],['eas','Kemudahan']];
+var LV_LABEL={pemula:'Pemula',menengah:'Menengah',mahir:'Mahir'};
+var ROLE_LABEL={solo:'Solo',party:'Party'};
+var LV_ORDER={pemula:1,menengah:2,mahir:3};
+
+var W=[
+{
+ id:'gs',nama:'Great Sword',emoji:'🗡️',tipe:'Jarak Dekat',levels:['menengah'],role:['solo','party'],
+ adv:'Pyro (Assault/Dragon), Luxheart (Disruptor/Thunder), Fated Adventurer',
+ desc:'Senjata dengan damage satu pukulan tertinggi. Lambat dan penuh komitmen: tahan Serangan Dasar untuk charge, lepas saat bar berwarna oranye. Overcharge justru menurunkan damage. Dibantu Tackle dan Perfect Evade untuk menutup jarak.',
+ stats:{dmg:10,spd:2,rng:6,mob:3,def:5,eas:4},
+ pros:['Damage per pukulan tertinggi di antara semua senjata','Tackle bisa membatalkan charge dan mempersingkat waktu menuju True Charged Slash','Bisa guard (Skill 1) dan punya counter Trailing Blade Slash setelah Perfect Evade'],
+ cons:['Gerak dan serang lambat, opening panjang','Overcharge menurunkan damage, butuh timing','Sulit mengejar monster yang sering berpindah'],
+ fit:{level:'Menengah',role:'Solo dan party. Cocok bagi yang suka membaca pola lalu menghantam di opening.'},
+ mech:[
+  ['Charge level','Tahan Serangan Dasar untuk charge; makin lama makin kuat. Lepas saat gauge di bagian oranye. Overcharge menurunkan damage.'],
+  ['Tackle (Skill 2)','Menekan Skill 2 saat charge membatalkan charge menjadi Tackle. Jika terkena serangan saat Tackle, level charge dipertahankan dan charge berikutnya tidak overcharge.'],
+  ['Perfect Evade','Setelah Perfect Evade, tahan Serangan Dasar untuk Trailing Blade Slash (counter).'],
+  ['Leaping Wide Slash (Skill 3)','Menebas ke depan lalu otomatis menyarungkan senjata — berguna untuk berpindah posisi.'],
+  ['Adventurer','Pyro: Heat Tackle dan Fortifying Slash (bisa jadi True Fortifying Slash). Luxheart: dukungan Disruptor; tidak perlu charge saat dikendalikan.']
+ ],
+ combos:[
+  {lv:'pemula',nama:'Serang–Mundur (Hit & Reposition)',syarat:'Setelah draw attack, saat masih mempelajari pola monster',steps:[['a','draw attack'],['ev','memotong recovery'],['sh','atau Skill 3']],situasi:'Awal hunt atau saat belum hafal serangan monster.',tujuan:['sustain'],tips:'Skill 3 (Leaping Wide Slash) otomatis menyarungkan senjata. Evade setelah draw attack mempersingkat animasi mengangkat senjata.'},
+  {lv:'standar',nama:'Tiga Charged Slash Beruntun',syarat:'Monster tidak sedang menargetkanmu',steps:[['a','draw attack'],['a','tahan, lepas di oranye'],['a','tahan, lepas di oranye']],situasi:'Saat monster sibuk dengan rekan satu tim atau sedang lama animasinya.',tujuan:['damage'],tips:'Lepas saat gauge masuk bagian oranye. Overcharge menurunkan damage.'},
+  {lv:'lanjutan',nama:'Fastest True Charged Slash',syarat:'Monster jatuh atau lumpuh',steps:[['a'],['a','tahan'],['s2','Tackle'],['a','tahan, lepas di oranye']],situasi:'Saat monster jatuh atau paralyzed.',tujuan:['damage'],tips:'Tackle bisa diganti dengan menggeser jari sambil menahan Serangan Dasar. Ulangi Tackle sebelum True Charged Slash untuk menyesuaikan timing dan jarak.'},
+  {lv:'lanjutan',nama:'Trailing Blade Slash',syarat:'Perfect Evade berhasil',steps:[['pe','Evade'],['a','tahan']],situasi:'Counter terhadap serangan monster yang bisa dihindari.',tujuan:['damage','sustain'],tips:'Evade harus ditekan tepat sebelum serangan mengenai.'},
+  {lv:'lanjutan',nama:'Supreme Slash',syarat:'',steps:[['a'],['a','tahan'],['s2'],['a','tahan'],['s2'],['s2']],situasi:'Sumber hanya mencantumkan urutan input.',tujuan:['damage'],tips:'Detail efek dan kondisi pemakaian belum dijelaskan sumber.',v:true}
+ ]
+},
+{
+ id:'ls',nama:'Long Sword',emoji:'⚔️',tipe:'Jarak Dekat',levels:['menengah'],role:['solo'],
+ adv:'Midori (Assault/Fire), Ryunosuke (Support/Fire), Fated Adventurer',
+ desc:'Jangkauan panjang, combo mengalir, dan banyak cara menangkis lalu menyerang balik. Damage naik seiring level Spirit Gauge, jadi kuncinya menjaga gauge tetap tinggi sambil menghindari serangan.',
+ stats:{dmg:7,spd:7,rng:7,mob:7,def:5,eas:6},
+ pros:['Jangkauan panjang, mudah menjangkau banyak bagian tubuh','Counter (Foresight Slash, Iai Spirit Slash) sekaligus menaikkan level gauge','Multiplier damage naik sampai 120% di gauge merah (menurut tutorial game)'],
+ cons:['Tidak bisa guard','Banyak gerakan menghabiskan gauge, perlu pola untuk menjaganya','Timing counter berubah antara solo dan party'],
+ fit:{level:'Menengah. Foresight Slash cukup ramah untuk belajar menangkis.',role:'Paling nyaman di solo; di party monster tidak selalu menargetkanmu, sehingga timing counter bergeser.'},
+ mech:[
+  ['Spirit Gauge','Tiga level: putih (105%), kuning (110%), merah (120%) menurut tutorial in-game. Banyak gerakan menghabiskan level.'],
+  ['Foresight Slash (Skill 2)','Counter yang bisa dipakai selama gauge punya sedikit isi. Jika follow-up spinning slash tidak kena, level gauge tidak naik.'],
+  ['Iai Spirit Slash (tahan Skill 2)','Bisa dipakai walau gauge kosong tetapi lambat masuk stance. Jika gagal, kamu terkena recovery.'],
+  ['Spirit Helm Breaker – Sever (Skill 3)','Serangan multi-hit besar, butuh gauge putih ke atas; dua kali pakai menghabiskan dua level.'],
+  ['Perfect Evade','Setelah Perfect Evade, tekan Serangan Dasar untuk Reverse Slash.'],
+  ['Adventurer','Midori: Blade of Truth dan Moment of Insight. Ryunosuke: Swig yang bisa mengarah ke Feasting (gauge terisi otomatis).']
+ ],
+ combos:[
+  {lv:'pemula',nama:'Bangun Gauge (Basic → Spirit Slash)',syarat:'',steps:[['a','×5'],['s1','×3, opsional']],situasi:'Saat monster jatuh atau tidak ada serangan masuk.',tujuan:['damage'],tips:'Level gauge hanya naik jika putaran terakhir Spirit Slash mengenai. Lebih terbuka dibanding counter, jadi pakai saat aman.'},
+  {lv:'standar',nama:'Foresight Slash',syarat:'Butuh sedikit isi Spirit Gauge',steps:[['a','opsional'],['s2','Foresight Slash'],['a','setelah dodge berhasil']],situasi:'Saat akan terkena serangan di tengah combo.',tujuan:['sustain','damage'],tips:'Jika follow-up spinning slash tidak mengenai, level gauge tidak naik. Jika monster jauh, lebih baik evade biasa.'},
+  {lv:'standar',nama:'Spirit Helm Breaker – Sever',syarat:'Gauge putih atau lebih',steps:[['s3','Sever'],['s3','opsional']],situasi:'Saat ada opening besar.',tujuan:['damage'],tips:'Menghabiskan dua level gauge. Kuat jika kamu bisa cepat kembali ke merah, tetapi tidak dianjurkan untuk menjaga damage konstan.'},
+  {lv:'lanjutan',nama:'Spirit Helm Breaker Loop',syarat:'Gauge merah',steps:[['s3','Helm Breaker'],['a','×3 lalu Skill 1 ×3'],['x','atau Foresight Slash'],['s3','ulangi']],situasi:'Standar rotasi setelah gauge mencapai merah.',tujuan:['damage'],tips:'Setelah Helm Breaker mengenai, gauge terus terisi beberapa saat. Jaga gauge di kuning atau merah sambil menghadapi serangan.'},
+  {lv:'lanjutan',nama:'Iai Spirit Slash',syarat:'Hafal timing serangan monster',steps:[['s2','tahan'],['s2','tepat sebelum serangan kena']],situasi:'Counter saat gauge kosong.',tujuan:['sustain','damage'],tips:'Masuk stance butuh waktu. Jika gagal, kamu terjebak recovery.'}
+ ]
+},
+{
+ id:'db',nama:'Dual Blades',emoji:'🔪',tipe:'Jarak Dekat',levels:['menengah'],role:['solo','party'],
+ adv:'Keres (Disruptor/Dragon), Haze (Support/Thunder), Raya (Disruptor/Fire), Fated Adventurer',
+ desc:'Senjata tercepat dengan banyak hit ringan. Jangkauan pendek dan tanpa guard, tetapi Demon Mode dan Archdemon Mode menaikkan kecepatan dan damage. Kamu harus menempel pada monster.',
+ stats:{dmg:7,spd:10,rng:2,mob:9,def:2,eas:5},
+ pros:['Paling cepat di roster, banyak hit memudahkan memicu efek elemen','Demon Mode: kecepatan gerak naik dan tidak mudah flinch','Evade lebih lincah saat di Demon/Archdemon, mudah tetap dekat'],
+ cons:['Jangkauan pendek','Tidak bisa guard','Stamina terkuras terus selama Demon Mode'],
+ fit:{level:'Menengah. Mudah dimulai tetapi menjaga posisi dan stamina butuh latihan.',role:'Solo dan party. Di party monster sering menargetkan rekan sehingga kamu lebih leluasa menyerang.'},
+ mech:[
+  ['Demon Mode (Skill 1)','Masuk/keluar Demon Mode. Menaikkan kecepatan serang dan gerak, mencegah flinch, membuka Skill 2 dan Skill 3, tetapi menguras stamina. Jika serangan atau roar monster mengeluarkanmu dari mode ini, tekan Skill 1 lagi.'],
+  ['Demon Gauge → Archdemon Mode','Setiap hit di Demon Mode mengisi Demon Gauge. Saat penuh, keluar dari Demon Mode untuk masuk Archdemon Mode: damage tetap kuat sambil memulihkan stamina.'],
+  ['Spinning Rush (Skill 2) & Blade Dance (Skill 3)','Hit pertama Spinning Rush menggerakkanmu jauh ke arah yang ditahan, bagus untuk mengejar. Hit pertama Spinning Rush tidak mereset Blade Dance.'],
+  ['Evade','Setelah evade, Serangan Dasar menjadi Cross Slash. Setelah Perfect Evade, ada follow-up tambahan. Di Demon/Archdemon, gerakan evade berubah dan lebih lincah.'],
+  ['Adventurer','Keres (Bone Piercer), Haze (buff affinity untuk rekan), Raya (jebakan pengikat dan counter Rising Whirling Dance).']
+ ],
+ combos:[
+  {lv:'pemula',nama:'Masuk Demon Mode: Rush → Dance',syarat:'Awal pertarungan',steps:[['s1','masuk Demon Mode'],['s2','Spinning Rush'],['s3','Blade Dance'],['x','ulangi Skill 2 → 3']],situasi:'Pembuka standar di sebagian besar hunt.',tujuan:['damage','mobilitas'],tips:'Hit pertama Spinning Rush memindahkanmu jauh, bagus untuk mengejar monster.'},
+  {lv:'pemula',nama:'Cross Slash',syarat:'Di luar Demon Mode',steps:[['ev'],['a','Cross Slash']],situasi:'Setelah menghindari serangan.',tujuan:['sustain','mobilitas'],tips:'Serangan Dasar setelah evade otomatis menjadi Cross Slash.'},
+  {lv:'standar',nama:'Demon Mode: Blade Dance',syarat:'Di Demon Mode',steps:[['s3'],['s3'],['s3']],situasi:'Saat monster jatuh atau terjebak.',tujuan:['damage'],tips:'Damage besar tetapi mungkin tidak menjangkau bagian yang kamu incar.'},
+  {lv:'standar',nama:'Blade Dance Sambil Bergerak',syarat:'Di Demon Mode',steps:[['s3'],['s2'],['s3'],['s2'],['s3']],situasi:'Monster aktif berpindah.',tujuan:['damage','mobilitas'],tips:'Skill 2 menggerakkanmu tanpa menghentikan rantai Blade Dance.'},
+  {lv:'lanjutan',nama:'Archdemon: Demon Flurry',syarat:'Di Archdemon Mode (gauge penuh lalu keluar Demon Mode)',steps:[['s3','Demon Flurry'],['s1','kembali ke Demon Mode'],['s3']],situasi:'Setelah Demon Gauge terisi penuh.',tujuan:['damage','sustain'],tips:'Archdemon memulihkan stamina. Skill 1 setelah Skill 3 mengembalikanmu ke Demon Mode sambil menjaga rantai Blade Dance.'}
+ ]
+},
+{
+ id:'hm',nama:'Hammer',emoji:'🔨',tipe:'Jarak Dekat',levels:['menengah'],role:['solo','party'],
+ adv:'Rhodes (Assault/Ice), Fated Adventurer',
+ desc:'Senjata tumpul yang menggabungkan mobilitas dan damage besar. Bisa bergerak saat charge, dan paling efektif memukul kepala untuk membangun Stun dan exhaustion.',
+ stats:{dmg:8,spd:4,rng:3,mob:6,def:2,eas:5},
+ pros:['Bisa bergerak saat charge, jadi charge tidak harus diam','Memukul kepala memicu Stun dan exhaustion — dukungan kuat di party','Combo Big Bang punya multiplier tertinggi'],
+ cons:['Tidak bisa guard','Tidak bisa memotong ekor','Serangan ketiga Overhead Smash meninggalkan opening besar'],
+ fit:{level:'Menengah. Lebih mudah jika kamu rutin mengincar kepala.',role:'Sangat berguna di party (menahan monster). Juga solid di solo bila Stun terpicu.'},
+ mech:[
+  ['Charge (Skill 1) & Charge: Resolute (Skill 2)','Tahan Skill 1 untuk charge; Skill 2 saat charge memberi Charge: Resolute. Di charge maksimum, Skill 2 menjadi Charge: Breakthrough yang menaikkan level charge satu tingkat lagi.'],
+  ['Gerak saat charge','Kamu boleh bergerak saat charge. Skill 3 saat charge menjadi Spinning Bludgeon yang menjaga level charge sambil bergerak.'],
+  ['Big Bang (Skill 3)','Sampai 5 hit; berhenti jika meleset. Tekan tepat sebelum lingkaran bertumpuk untuk Precise Tap. Jika Precise Tap 4 kali atau lebih, hit terakhir menjadi Charged Smash.'],
+  ['Perfect Evade','Setelah Perfect Evade, Skill 1 memulai charge dari level 2. Evade saat charge pertama bisa mereset charge, evade saat charge kedua tidak.'],
+  ['Adventurer','Rhodes: Steam Energy dan Core Energy; Skill 3 menjadi Steam Skyrender saat Core Energy penuh.']
+ ],
+ combos:[
+  {lv:'pemula',nama:'Overhead Smash',syarat:'',steps:[['a'],['a'],['a','atau Evade']],situasi:'Menyerang di sela serangan monster.',tujuan:['damage','stagger'],tips:'Hit ketiga meninggalkan opening besar. Berhenti di hit kedua lalu perhatikan monster, atau ganti dengan Perfect Evade.'},
+  {lv:'pemula',nama:'Basic Charge',syarat:'',steps:[['s1','charge'],['a','lepas']],situasi:'Pukulan charge sederhana.',tujuan:['damage'],tips:'Damage lebih rendah dari Charge: Resolute. Umumnya lebih baik menekan Skill 2 di charge maksimum.'},
+  {lv:'standar',nama:'Charge: Resolute',syarat:'Monster banyak bergerak',steps:[['s1','charge sampai maks'],['s2','Breakthrough'],['a','Charged Smash']],situasi:'Saat monster sulit didekati; menghindar sambil charge.',tujuan:['damage','stagger'],tips:'Kamu boleh bergerak saat charge. Evade di charge pertama bisa mereset; evade di charge kedua tidak.'},
+  {lv:'standar',nama:'Counter Perfect Evade',syarat:'',steps:[['a'],['a'],['pe','Evade'],['a'],['a']],situasi:'Saat charge sulit dipakai.',tujuan:['damage','sustain'],tips:'Menambah damage dan Stun sambil tetap aman. Hentikan di hit kedua agar tidak terbuka.'},
+  {lv:'lanjutan',nama:'Big Bang',syarat:'Monster stun atau exhausted',steps:[['s3'],['s3'],['s3'],['s3'],['s3']],situasi:'Opening besar setelah Stun.',tujuan:['damage'],tips:'Tekan Skill 3 tepat sebelum lingkaran bertumpuk (Precise Tap). Berhenti jika meleset. Suara berubah saat sukses/gagal.'},
+  {lv:'lanjutan',nama:'Evade Saat Charge',syarat:'',steps:[['s1','charge'],['pe','Evade'],['s1','mulai dari level 2']],situasi:'Menghadapi serangan saat charge pertama.',tujuan:['sustain'],tips:'Setelah Perfect Evade, Skill 1 mulai dari level 2 tetapi kamu tetap harus charge ulang. Idealnya dipakai selama Charge: Resolute.'}
+ ]
+},
+{
+ id:'ln',nama:'Lance',emoji:'🛡️',tipe:'Jarak Dekat',levels:['pemula','menengah'],role:['solo'],
+ adv:'Arkaya (Support/Dragon), Ouyang Varen (Assault/Water), Fated Adventurer',
+ desc:'Tombak panjang dan perisai besar: pertahanan terbaik di roster. Kekuatan utamanya adalah menahan serangan lalu membalas. Bergerak lambat saat senjata terhunus, tetapi Dash Attack menutup jarak dengan cepat.',
+ stats:{dmg:5,spd:4,rng:6,mob:3,def:10,eas:6},
+ pros:['Pertahanan terbaik di semua tipe senjata','Perfect Guard dan Charged Counter menghasilkan counter kuat','Dash Attack menutup jarak cepat dan mudah diarahkan'],
+ cons:['Gerak lambat saat terhunus','Di party monster tidak selalu menargetkanmu sehingga kesempatan counter berkurang','Power Guard dan Dash Attack menguras stamina'],
+ fit:{level:'Pemula–Menengah. Guard memudahkan belajar, Perfect Guard menuntut timing.',role:'Terbaik di solo. Di party, bangun damage lewat Thrust dan Dash Attack saat rekan jadi target.'},
+ mech:[
+  ['Guard (Skill 1) & Perfect Guard','Awal guard adalah Perfect Guard. Tekan Serangan Dasar setelah guard untuk Counter Thrust.'],
+  ['Charged Counter (Skill 2)','Charge sambil guard. Lepaskan dengan Serangan Dasar setelah tombol berubah oranye untuk counter dua hit; menekan lebih awal tetap memberi Counter Thrust yang lebih lemah.'],
+  ['Power Guard','Tekan Skill 2 lagi saat charge. Menahan hampir semua serangan tetapi menguras banyak stamina.'],
+  ['Guard Dash (Skill 3) & Dash Attack','Tahan Skill 3 untuk Dash Attack; tiap tombol Serangan Dasar berubah warna, tusukan akhir makin kuat.'],
+  ['Evade','Setelah evade ke belakang, Serangan Dasar menjadi Leaping Thrust.'],
+  ['Adventurer','Arkaya (Support): perisai untuk party. Ouyang Varen (Assault): bangun Sharpness lewat counter.']
+ ],
+ combos:[
+  {lv:'pemula',nama:'Thrust Combo',syarat:'Saat rekan menjadi target monster',steps:[['a'],['a'],['a'],['s3','opsional'],['a','ulang']],situasi:'Mengisi damage di sela serangan monster atau saat monster jatuh.',tujuan:['damage'],tips:'Damage per hit rendah tetapi aman. Setelah hit ketiga, Skill 2 menyelesaikan charge instan.'},
+  {lv:'pemula',nama:'Dash Attack',syarat:'Monster menjauh',steps:[['s3','tahan'],['a','lepas']],situasi:'Menutup jarak saat monster menjauh.',tujuan:['mobilitas','damage'],tips:'Makin lama dash, makin tinggi tahap tusukan akhir (tombol Serangan Dasar berubah warna). Menguras stamina.'},
+  {lv:'standar',nama:'Charged Counter',syarat:'Timing dengan serangan monster',steps:[['s2','charge sambil guard'],['a','setelah oranye']],situasi:'Solo, saat monster menyerangmu.',tujuan:['sustain','damage'],tips:'Counter dua hit hanya keluar jika timing tepat. Tekan Serangan Dasar sebelum oranye untuk Counter Thrust yang lebih lemah.'},
+  {lv:'lanjutan',nama:'Perfect Guard Counter',syarat:'Timing dengan serangan monster',steps:[['pe','Guard'],['a','Counter Thrust']],situasi:'Pemain yang sudah hafal serangan monster.',tujuan:['sustain','damage'],tips:'Lebih sulit dari Charged Counter dan salah timing membuatmu mudah terkena. Perisai membalas otomatis.'},
+  {lv:'lanjutan',nama:'Power Guard',syarat:'Menghadapi serangan kuat',steps:[['s2'],['s2','Power Guard'],['a','setelah guard berhasil']],situasi:'Menahan serangan besar.',tujuan:['sustain'],tips:'Menguras stamina; terdorong ke combo atau kehabisan stamina fatal.'}
+ ]
+},
+{
+ id:'cb',nama:'Charge Blade',emoji:'🪓',tipe:'Jarak Dekat',levels:['mahir'],role:['solo','party'],
+ adv:'Fated Adventurer (satu-satunya pemakai saat ini)',
+ desc:'Berubah antara Sword Mode (cepat, bisa guard, mengisi energi) dan Axe Mode (lambat, jangkauan jauh, menghabiskan vial untuk damage besar). Kontrolnya kompleks, tetapi bila dikuasai kamu bisa bertahan sekaligus memukul keras. Diumumkan untuk peluncuran pada September 2026.',
+ stats:{dmg:8,spd:5,rng:5,mob:5,def:7,eas:2},
+ pros:['Sword Mode stabil: guard, guard point, dan serangan cepat','Axe Mode, terutama di Power Axe Mode, sangat kuat terhadap monster besar','Perfect Guard memberi 3 vial; Perfect Evade di Axe Mode memberi 1 vial'],
+ cons:['Mekanik paling kompleks (energi, vial, dua mode, dua enhancement)','Axe Mode lambat dan opening besar','Jendela masuk Power Axe Mode sangat singkat'],
+ fit:{level:'Mahir. Siapkan waktu untuk menghafal siklus Sword Energy → vial → Axe.',role:'Solo dan party; kuat terhadap boss besar menurut peringkat komunitas.'},
+ mech:[
+  ['Sword Energy & vial','Sword Energy terisi saat menyerang di Sword Mode, lalu dipakai untuk mengisi vial dan masuk mode enhancement.'],
+  ['Sword & Shield Mode','Masuk lewat Skill 2 (Sword: Reload) saat energi cukup. Sword Mode lebih kuat, serangan tidak memantul, guard lebih tangguh. Semakin banyak vial dihabiskan, semakin lama.'],
+  ['Power Axe Mode','Masuk dengan menekan Skill 2 tepat saat Skill 3 (Axe) dimulai, butuh minimal 1 vial. Axe Mode lebih kuat dan membuka beberapa gerakan.'],
+  ['Morph (Skill 1)','Tahan Skill 1 di Sword Mode untuk morph ke Axe; ketuk Skill 1 di Axe Mode untuk kembali.'],
+  ['Perfect Evade/Guard','Sword Mode: Perfect Evade memberi 0,5 detik kebal. Axe Mode: memberi 1 vial dan Basic Attack berikutnya menjadi Axe: Element Discharge II.'],
+  ['Guard point','Sebagian gerakan punya jendela guard bawaan untuk mengisi vial efisien. Untuk pemain lanjutan.']
+ ],
+ combos:[
+  {lv:'pemula',nama:'Sword: Sidestep Slash',syarat:'Sword Mode',steps:[['a','Chain Slash'],['a','dengan stick dimiringkan']],situasi:'Bergeser sambil menyerang dan mengisi Sword Energy.',tujuan:['mobilitas','sustain'],tips:'Hit yang diterima tepat saat perisai menghadap depan menjadi Perfect Guard. Termasuk "pemula" hanya relatif terhadap Charge Blade.'},
+  {lv:'standar',nama:'Masuk Sword & Shield Mode',syarat:'Sword Mode',steps:[['a','isi gauge'],['s2','Reload']],situasi:'Langkah dasar sebelum semua enhancement.',tujuan:['sustain','damage'],tips:'Gunakan Charged Double Slash (tahan Serangan Dasar, lepas saat bersinar merah, lalu Serangan Dasar) untuk mengisi Sword Energy cepat.'},
+  {lv:'standar',nama:'Axe: Spin Pursuit',syarat:'Axe Mode, dalam Sword & Shield Mode, ada vial dan Sword Energy',steps:[['s3','Super Amped'],['s3','Spin Pursuit']],situasi:'Mempertahankan Axe Mode sambil mengisi ulang vial.',tujuan:['damage','sustain'],tips:'Skill 3 kedua mengubah Sword Energy menjadi vial dan membuatmu tetap di Axe Mode.'},
+  {lv:'lanjutan',nama:'Isi Vial Cepat + Power Axe Mode',syarat:'Sword Mode',steps:[['a','tahan, lepas saat merah'],['a'],['s2'],['a','tahan, lepas saat merah'],['a'],['s2'],['s3'],['s3'],['s2','tepat saat Skill 3 mulai']],situasi:'Menyiapkan Power Axe Mode secepat mungkin.',tujuan:['damage'],tips:'Jendela Skill 2 untuk Savage Axe Slash sangat singkat, perhatikan timing.'},
+  {lv:'lanjutan',nama:'Power Axe Basic Loop',syarat:'Power Axe Mode, Axe Mode',steps:[['a','tahan'],['a','tahan'],['x','ulangi']],situasi:'Menekan damage di Axe Mode.',tujuan:['damage'],tips:'Tahan Serangan Dasar untuk serangan multi-hit. Gunakan Ultra Amped Element Discharge (Skill 3) saat monster jatuh.'}
+ ]
+},
+{
+ id:'hb',nama:'Heavy Bowgun',emoji:'🔫',tipe:'Jarak Jauh',levels:['pemula'],role:['solo','party'],
+ adv:'Pepper (Disruptor/Water), Fated Adventurer',
+ desc:'Senjata tembak paling bertenaga: serang dari jarak aman, auto-guard saat idle, dan ganti amunisi sesuai situasi. Semua Heavy Bowgun bisa memuat semua jenis amunisi.',
+ stats:{dmg:8,spd:5,rng:10,mob:3,def:6,eas:7},
+ pros:['Menyerang dari jarak aman','Auto-guard saat kamu tidak menekan apa pun; Perfect Guard mereload otomatis','Banyak jenis amunisi (Pierce, Spread, Sticky, Slicing, Wyvern, Cluster Bomb)'],
+ cons:['Damage turun jika terlalu jauh dari efektif range','Wyvern Ammo membuatmu terbuka dan jangkauan pendek','Mobilitas rendah'],
+ fit:{level:'Pemula. Mulai dengan Normal Ammo dan ingat: saat serangan datang, jangan tekan apa pun.',role:'Solo dan party. Sticky Ammo di kepala membantu memicu Stun untuk tim.'},
+ mech:[
+  ['Tembakan biasa (Serangan Dasar)','Memakai Normal Ammo, Pierce Ammo, atau Spread Ammo, masing-masing dengan jangkauan optimal berbeda. Pierce menembus tubuh dan makin banyak hit jika garis tembak panjang; Spread melebar dan efektif jarak dekat; Normal lebih jauh dan stabil.'],
+  ['Special Ammo (Skill 2)','Tahan untuk ganti: Sticky (membangun Stun di kepala), Slicing (satu-satunya amunisi yang bisa memotong ekor), Wyvern (damage tertinggi, jarak sangat pendek, perlu charge), Cluster Bomb (melengkung, damage area).'],
+  ['Wyvernheart (Skill 3)','Mengisi Wyvernheart untuk tembakan berkelanjutan damage tinggi. Skill 2 dan Skill 3 terisi pelan seiring waktu dan lebih cepat saat kamu menimbulkan damage.'],
+  ['Guard','Skill 1 untuk guard. Guard tepat waktu menjadi Perfect Guard dan mereload otomatis. Setelah Perfect Evade, evade lagi memicu Calm Steps.'],
+  ['Adventurer','Pepper: mobilitas tinggi dan waktu di udara panjang, Ultimate menimbulkan paralysis dan meningkatkan damage yang diterima monster.']
+ ],
+ combos:[
+  {lv:'pemula',nama:'Tembak Normal Ammo',syarat:'Jaga jarak dekat–menengah',steps:[['a','Normal Ammo'],['a','ulang'],['x','jangan tekan apa pun saat serangan datang']],situasi:'Belajar kontrol dan membiasakan diri dengan auto-guard.',tujuan:['sustain','damage'],tips:'Normal Ammo punya batas damage lebih rendah tetapi stabil dan jangkauan lebih panjang dibanding Spread.'},
+  {lv:'standar',nama:'Rotasi Special Ammo + Wyvernheart',syarat:'',steps:[['s2','Special Ammo'],['a','tembak'],['s3','Wyvernheart'],['a','tahan'],['s2']],situasi:'Pola damage dasar.',tujuan:['damage'],tips:'Skill 2 dan 3 pulih lebih cepat saat kamu menyerang. Isi jeda dengan tembakan biasa.'},
+  {lv:'standar',nama:'Slicing Ammo untuk Ekor',syarat:'Ekor ada di garis tembak, ideal dari belakang',steps:[['s2','Slicing Ammo'],['a','tembak ke ekor']],situasi:'Saat ingin memotong ekor.',tujuan:['damage'],tips:'Pastikan kepala atau sayap tidak menghalangi garis tembak.'},
+  {lv:'lanjutan',nama:'Wyvern Ammo Saat Monster Jatuh',syarat:'Monster jatuh atau stun',steps:[['s2','Wyvern Ammo'],['a','tembak ke titik lemah']],situasi:'Opening besar.',tujuan:['damage'],tips:'Damage tertinggi di antara Special Ammo tetapi butuh charge dan terbuka. Gunakan Wyvern Ammo, bukan Cluster Bomb, untuk damage.'},
+  {lv:'lanjutan',nama:'Perfect Guard Reload',syarat:'Timing dengan serangan monster',steps:[['pe','Guard'],['a','tembak']],situasi:'Bertahan sambil menjaga ritme tembakan.',tujuan:['sustain'],tips:'Perfect Guard mereload amunisi yang terpasang secara instan dan lebih cepat dari reload biasa.'}
+ ]
+},
+{
+ id:'bw',nama:'Bow',emoji:'🏹',tipe:'Jarak Jauh',levels:['pemula','menengah'],role:['solo','party'],
+ adv:'Luka (Assault/Thunder), Madelyn (Support/Water), Fated Adventurer',
+ desc:'Senjata jarak jauh yang paling mobile. Auto-aim membantu mengenai titik lemah. Level charge sampai 4 menentukan jumlah dan kekuatan panah, dan Slide Shot menjaga jarak sambil mempertahankan charge.',
+ stats:{dmg:7,spd:7,rng:9,mob:9,def:3,eas:6},
+ pros:['Mobilitas tinggi dan tembakan berkelanjutan dari jarak menengah–jauh','Auto-aim membantu menghantam titik lemah','Slide Shot punya invulnerability frame dan menjaga level charge'],
+ cons:['Damage turun jika di luar jarak optimal','Sebagian besar aksi memakai stamina','Pertahanan rendah, tidak ada guard'],
+ fit:{level:'Pemula–Menengah. Bermain aman dengan Slide Shot, kuasai Power Shot di tahap berikutnya.',role:'Solo dan party. Madelyn memberi dukungan penyembuhan.'},
+ mech:[
+  ['Level charge','Rapid Fire dan Power Shot menaikkan level charge satu tingkat sampai 4; menahan Serangan Dasar juga mengisi charge. Slide Shot menembak sambil mempertahankan level.'],
+  ['Slide Shot (Skill 1)','Langkah awal punya invulnerability, tetapi bukan Perfect Evade. Evade biasa lebih menguntungkan jika bisa dihindari dengan mulus.'],
+  ['Power Shot (Skill 2) & Arc Shot (Skill 3)','Power Shot menembak panah menyebar horizontal, makin dekat makin besar damage. Arc Shot menghujani panah; di charge 4 menjatuhkan 40 panah.'],
+  ['Dragon vial & Dragon Barrage: Rain','Dragon vial terisi saat serangan mengenai. Saat penuh, Skill 3 menjadi Dragon Barrage: Rain; damage tidak dipengaruhi level charge.'],
+  ['Perfect Evade','Setelah Perfect Evade, Serangan Dasar menembakkan Piercing Shot, bisa mengenai sampai 5 kali.'],
+  ['Adventurer','Luka: tembakan piercing dan Boltstep Counter. Madelyn: spora pada monster lalu diledakkan, Ultimate menyembuhkan.']
+ ],
+ combos:[
+  {lv:'pemula',nama:'Slide Shot Loop',syarat:'Sambil mempelajari pola monster',steps:[['a','Rapid Fire'],['s1','Slide Shot'],['x','ulangi']],situasi:'Bermain aman, jaga jarak, tembak titik lemah.',tujuan:['sustain','damage'],tips:'Selingi Serangan Dasar agar stamina tidak habis karena Skill 1 berulang.'},
+  {lv:'standar',nama:'Slide Shot → Power Shot',syarat:'Opening dari monster (flash atau setelah serangan besar)',steps:[['s1','Slide Shot'],['a','opsional naikkan charge'],['s2','Power Shot'],['x','ulangi']],situasi:'Saat monster terbuka dan kamu bisa mendekat.',tujuan:['damage'],tips:'Jika level charge sudah cukup, lewati Serangan Dasar. Recovery Power Shot bisa dibatalkan dengan Slide Shot.'},
+  {lv:'standar',nama:'Piercing Shot',syarat:'Perfect Evade berhasil',steps:[['pe','Evade'],['a','Piercing Shot']],situasi:'Counter dari serangan monster.',tujuan:['damage','sustain'],tips:'Bisa mengenai sampai 5 kali (tergantung monster) dan mengisi dragon vial di tiap hit.'},
+  {lv:'lanjutan',nama:'Power Shot Charge Tinggi',syarat:'',steps:[['a','Rapid Fire'],['s1'],['a'],['s2','Power Shot']],situasi:'Memaksimalkan jumlah panah.',tujuan:['damage'],tips:'Charge level 4 menembak sampai 6 panah dengan Power Shot.'},
+  {lv:'lanjutan',nama:'Arc Shot Charge 4 Tercepat',syarat:'',steps:[['a','tahan sampai level 4'],['s3','Arc Shot']],situasi:'Menghujani monster dengan 40 panah.',tujuan:['damage'],tips:'Jika dragon vial penuh, Skill 3 otomatis menjadi Dragon Barrage: Rain.'},
+  {lv:'lanjutan',nama:'Dragon Barrage: Rain',syarat:'Dragon vial penuh, monster jatuh atau lumpuh',steps:[['s3','Dragon Barrage: Rain']],situasi:'Saat monster tidak bergerak agar semua panah mengenai.',tujuan:['damage'],tips:'Butuh waktu lama sampai semua hit mendarat. Pada monster besar, membidik badan kadang lebih kuat daripada titik lemah.'}
+ ]
+}
+];
+
+var BUILD=[
+ {e:'🧭',t:'Belajar monster baru / ingin aman',txt:'Pilih senjata yang menjaga jarak atau bisa guard. Heavy Bowgun auto-guard saat idle, Bow punya Slide Shot dengan invulnerability, Lance guard-nya tebal, dan Long Sword punya Foresight Slash untuk menangkis.',w:['hb','bw','ln','ls']},
+ {e:'🏃',t:'Monster sering berpindah atau kabur',txt:'Gunakan senjata yang bisa mengejar: Dash Attack Lance, Spinning Rush Dual Blades (hit pertama bergerak jauh), Tackle Great Sword, dan Hammer yang boleh bergerak saat charge. Bow dan Heavy Bowgun menyerang dari jauh.',w:['ln','db','hm','bw','gs']},
+ {e:'💥',t:'Monster jatuh, stun, atau lumpuh',txt:'Ini saat untuk serangan besar: True Charged Slash (Great Sword), Big Bang (Hammer), Wyvern Ammo (Heavy Bowgun), Dragon Barrage: Rain (Bow), Blade Dance (Dual Blades), dan Ultra Amped Element Discharge (Charge Blade).',w:['gs','hm','hb','bw','db','cb']},
+ {e:'✂️',t:'Ingin memotong ekor',txt:'Heavy Bowgun punya Slicing Ammo yang menimbulkan damage severing dan satu-satunya amunisi yang bisa memotong ekor. Hammer tidak bisa memotong ekor. Kemampuan tebas senjata lain belum saya verifikasi.',w:['hb','hm'],v:true},
+ {e:'👥',t:'Main party / co-op (maks 4 pemain)',txt:'Hammer menahan monster lewat Stun dan exhaustion yang menciptakan opening untuk rekan. Dual Blades leluasa menempel saat monster menargetkan orang lain. Di party kesempatan counter Lance berkurang, jadi bangun damage dengan Thrust dan Dash Attack.',w:['hm','db','ln','bw']},
+ {e:'🛡️',t:'Solo dan suka counter',txt:'Lance (Perfect Guard, Charged Counter), Long Sword (Foresight Slash), dan Charge Blade (Perfect Guard memberi 3 vial) paling terbantu saat monster fokus padamu.',w:['ln','ls','cb']},
+ {e:'🔥',t:'Mencocokkan elemen',txt:'Untuk Fated Adventurer, elemen berasal dari senjata. Pilih senjata dengan elemen yang sesuai kelemahan monster. Daftar kelemahan tiap monster tidak saya cantumkan karena belum diverifikasi.',w:['gs','ls','db','hm','ln','cb','hb','bw'],v:true},
+ {e:'🧪',t:'Mau fokus damage besar tetapi tidak ragu belajar',txt:'Great Sword (damage per hit tertinggi), Hammer (Big Bang), Charge Blade (Power Axe Mode). Siapkan waktu latihan timing.',w:['gs','hm','cb']}
+];
+
+var PICK=[
+ {k:'aman',l:'Aman & santai',w:['hb','bw','ln'],t:'Senjata yang menjaga jarak atau punya guard kuat memberi ruang untuk belajar pola monster.'},
+ {k:'cepat',l:'Cepat & lincah',w:['db','bw','ls'],t:'Dual Blades paling cepat, Bow paling mobile, Long Sword punya jangkauan dan combo mengalir.'},
+ {k:'jauh',l:'Dari jarak jauh',w:['hb','bw'],t:'Dua senjata jarak jauh: Heavy Bowgun untuk firepower, Bow untuk mobilitas.'},
+ {k:'dmg',l:'Damage besar',w:['gs','hm','cb'],t:'Great Sword dengan pukulan terkuat, Hammer dengan Big Bang dan Stun, Charge Blade dengan Power Axe Mode.'},
+ {k:'counter',l:'Counter & timing',w:['ls','ln','cb'],t:'Menangkis lalu membalas: Foresight Slash, Perfect Guard, dan guard point.'},
+ {k:'party',l:'Membantu tim',w:['hm','db','bw'],t:'Hammer menahan monster dengan Stun; Dual Blades dan Bow mudah menyesuaikan diri di party.'}
+];
+
+var FAQ=[
+ ['Ada berapa senjata di Monster Hunter Outlanders?','Delapan tipe saat peluncuran: Great Sword, Long Sword, Dual Blades, Hammer, Lance, Heavy Bowgun, Bow, dan Charge Blade. Beberapa sumber lama menyebut tujuh karena Charge Blade baru diumumkan produser pada September 2026. Developer juga menyatakan akan menambah tipe senjata lain lewat update.'],
+ ['Senjata seri utama apa yang belum ada?','Menurut sumber komunitas, Sword & Shield, Gunlance, Switch Axe, Insect Glaive, Hunting Horn, dan Light Bowgun belum ada di daftar peluncuran. Daftar ini bisa berubah setelah update, cek pengumuman resmi.'],
+ ['Senjata mana yang terbaik untuk pemula?','Tidak ada jawaban tunggal. Peringkat komunitas berbeda-beda (ada yang menaruh Heavy Bowgun di puncak untuk karakter utama, ada yang menaruh Long Sword atau Charge Blade). Untuk belajar, Heavy Bowgun (auto-guard), Bow (Slide Shot), dan Lance (guard) umumnya dianggap ramah.'],
+ ['Apa bedanya Fated Adventurer dengan Adventurer lain?','Fated Adventurer (karakter utamamu) bisa memakai semua tipe senjata dan memilih tipe Assault, Disruptor, atau Support. Adventurer lain memiliki senjata dan elemen tetap, serta skill dan Ultimate sendiri. Gerakan di panduan ini adalah milik Fated Adventurer; Adventurer lain bisa berbeda di tombol skill tertentu.'],
+ ['Apa itu Perfect Evade?','Evade yang ditekan tepat sebelum serangan monster mengenai (termasuk roar). Terlalu cepat menjadi evade biasa, terlalu lambat membuatmu terkena. Tiap senjata punya hadiah berbeda, mis. counter, menjaga charge, menambah vial, atau menaikkan Demon Gauge.'],
+ ['Apakah skor 1–10 di panduan ini resmi?','Bukan. Game tidak menampilkan skor seperti itu. Skor adalah penilaian kualitatif panduan ini dari deskripsi sumber, supaya senjata mudah dibandingkan. Perlakukan sebagai gambaran kasar.'],
+ ['Kenapa nama mode kontrol berbeda-beda di tiap sumber?','Sumber menyebut "Starter Mode/Adventure Mode", "Starting Mode/Hunting Mode", atau "Adventure/Classic". Kemungkinan karena perbedaan fase beta, terjemahan, atau update. Nama resminya perlu verifikasi di game.'],
+ ['Apakah data di sini akan selalu akurat?','Data bisa berubah seiring update game. Panduan ini dirangkum dari panduan komunitas yang dicek pada 11 November 2026. Jika ada perbedaan dengan yang kamu lihat di game, yang di game yang benar.']
+];
+
+/* ---------- State ---------- */
+var S={q:'',lvl:'semua',role:'semua',cw:'gs',cl:'semua',a:'gs',b:'bw',sk:'total',sd:-1};
+var QMAP={};W.forEach(function(w){QMAP[w.id]=w});
+
+W.forEach(function(w){
+  w.total=0;STAT_KEYS.forEach(function(k){w.total+=w.stats[k[0]]});
+  w.idx=norm([w.nama,w.tipe,w.desc,w.adv,w.pros.join(' '),w.cons.join(' '),w.mech.map(function(m){return m.join(' ')}).join(' ')].join(' '));
+  w.combos.forEach(function(c){
+    c.w=w.id;
+    c.idx=norm([c.nama,c.syarat,c.situasi,c.tips,c.tujuan.join(' '),c.lv,c.steps.map(function(s){return stepLabel(s[0])+' '+(s[1]||'')}).join(' ')].join(' '));
+  });
+});
+
+/* ---------- Chips ---------- */
+function stepLabel(t){return {a:'Serangan Dasar',s1:'Skill 1',s2:'Skill 2',s3:'Skill 3',ev:'Evade',pe:'Perfect',sh:'Sarungkan',x:''}[t]||''}
+function chipHTML(s){
+  var t=s[0],n=s[1]||'';
+  var lab=stepLabel(t);
+  if(t==='pe'){lab='Perfect '+(n&&/guard/i.test(n)?'Guard':'Evade');n=n&&!/^(evade|guard)$/i.test(n)?n:'';}
+  if(t==='x'){return '<span class="chip x">'+esc(n)+'</span>';}
+  return '<span class="chip '+t+'">'+esc(lab)+(n?'<small>'+esc(n)+'</small>':'')+'</span>';
+}
+function chainHTML(steps){return '<div class="chain" role="list" aria-label="Urutan input">'+steps.map(chipHTML).join('<span class="arrow" aria-hidden="true">→</span>')+'</div>';}
+var GOAL={damage:'⚔️ Damage',stagger:'💫 Stagger/Stun',sustain:'🛡️ Sustain',mobilitas:'🏃 Mobilitas'};
+var LVC={pemula:'Pemula',standar:'Standar',lanjutan:'Lanjutan'};
+function comboHTML(c,showW){
+  var w=QMAP[c.w];
+  return '<article class="combo"><div class="combo-top"><h4>'+(showW?w.emoji+' '+esc(w.nama)+' — ':'')+esc(c.nama)+'</h4><span><span class="lvtag '+c.lv+'">'+LVC[c.lv]+'</span> '+(c.v?VB:'')+'</span></div>'
+   +(c.syarat?'<div class="syarat">Syarat: '+esc(c.syarat)+'</div>':'')
+   +chainHTML(c.steps)
+   +'<div class="cmeta"><div><strong>Situasi</strong><span>'+esc(c.situasi)+'</span></div>'
+   +'<div><strong>Tujuan</strong><span>'+c.tujuan.map(function(g){return '<span class="goal">'+GOAL[g]+'</span>'}).join(' ')+'</span></div>'
+   +'<div><strong>Tips timing</strong><span>'+esc(c.tips)+'</span></div></div></article>';
+}
+
+/* ---------- Filters (weapon section) ---------- */
+function buildFilters(){
+  var l=$('#fLvl');
+  [['semua','Semua'],['pemula','Pemula'],['menengah','Menengah'],['mahir','Mahir']].forEach(function(x){
+    var b=document.createElement('button');b.type='button';b.className='chipbtn';b.textContent=x[1];b.dataset.v=x[0];b.setAttribute('aria-pressed',x[0]==='semua');
+    b.addEventListener('click',function(){S.lvl=x[0];$$('button',l).forEach(function(z){z.setAttribute('aria-pressed',z.dataset.v===S.lvl)});renderWeapons();});
+    l.appendChild(b);
+  });
+  var r=$('#fRole');
+  [['semua','Semua'],['solo','Solo'],['party','Party']].forEach(function(x){
+    var b=document.createElement('button');b.type='button';b.className='chipbtn';b.textContent=x[1];b.dataset.v=x[0];b.setAttribute('aria-pressed',x[0]==='semua');
+    b.addEventListener('click',function(){S.role=x[0];$$('button',r).forEach(function(z){z.setAttribute('aria-pressed',z.dataset.v===S.role)});renderWeapons();});
+    r.appendChild(b);
+  });
+}
+
+function matchWeapon(w){
+  if(S.lvl!=='semua'&&w.levels.indexOf(S.lvl)<0)return false;
+  if(S.role!=='semua'&&w.role.indexOf(S.role)<0)return false;
+  if(S.q){var q=norm(S.q);if(w.idx.indexOf(q)<0&&!w.combos.some(function(c){return c.idx.indexOf(q)>=0}))return false;}
+  return true;
+}
+
+/* ---------- Weapon cards ---------- */
+function cardHTML(w){
+  var q=norm(S.q);
+  var lvPills=w.levels.map(function(l){return '<span class="pill lv-'+l+'">'+LV_LABEL[l]+'</span>'}).join('');
+  var rolePills=w.role.map(function(r){return '<span class="pill">'+ROLE_LABEL[r]+'</span>'}).join('');
+  var stats=STAT_KEYS.map(function(k){var v=w.stats[k[0]];return '<div class="stat"><span>'+k[1]+'</span><div class="bar" style="--v:'+v+'" role="img" aria-label="'+k[1]+' '+v+' dari 10"><i></i></div><b>'+v+'</b></div>'}).join('');
+  var comboMatch=q&&w.idx.indexOf(q)<0?w.combos.filter(function(c){return c.idx.indexOf(q)>=0}).length:0;
+  return '<article class="wcard" id="w-'+w.id+'" data-id="'+w.id+'">'
+  +'<div class="whead"><div class="wico" aria-hidden="true">'+w.emoji+'</div><div><h3>'+esc(w.nama)+'</h3><div class="wbadges"><span class="pill">'+esc(w.tipe)+'</span>'+lvPills+rolePills+'</div></div></div>'
+  +'<div class="wbody">'
+  +'<p style="margin:0">'+esc(w.desc)+'</p>'
+  +'<div class="stats">'+stats+'<div class="statnote">Skor 1–10 = penilaian editorial, bukan data resmi '+VB+'</div></div>'
+  +'<div class="pc"><div class="pro"><h5>Kelebihan</h5><ul>'+w.pros.map(function(p){return '<li>'+esc(p)+'</li>'}).join('')+'</ul></div><div class="con"><h5>Kekurangan</h5><ul>'+w.cons.map(function(p){return '<li>'+esc(p)+'</li>'}).join('')+'</ul></div></div>'
+  +'<div class="fit"><div><strong>Kesulitan</strong><span>'+esc(w.fit.level)+'</span></div><div><strong>Cocok untuk</strong><span>'+esc(w.fit.role)+'</span></div><div><strong>Adventurer</strong><span>'+esc(w.adv)+'</span></div></div>'
+  +'<details class="mech"'+(comboMatch?'':'')+'><summary>Mekanik khusus</summary><div class="mech-list">'+w.mech.map(function(m){return '<div><b>'+esc(m[0])+'.</b> '+esc(m[1])+'</div>'}).join('')+'</div></details>'
+  +'</div>'
+  +'<div class="wfoot"><button class="btn" type="button" data-act="combo" data-id="'+w.id+'">🔗 Lihat '+w.combos.length+' combo'+(comboMatch?' ('+comboMatch+' cocok)':'')+'</button><button class="btn" type="button" data-act="cmp" data-id="'+w.id+'">📊 Bandingkan</button></div>'
+  +'</article>';
+}
+var barObs=null;
+function observeBars(root){
+  var bars=$$('.bar:not(.go)',root);
+  if(!('IntersectionObserver' in window)){bars.forEach(function(b){b.classList.add('go')});return;}
+  if(!barObs){barObs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){$$('.bar',e.target).forEach(function(b){b.classList.add('go')});barObs.unobserve(e.target);}})},{threshold:.25});}
+  $$('.wcard,.cmp-col',root).forEach(function(c){barObs.observe(c);});
+}
+function renderWeapons(){
+  var list=W.filter(matchWeapon);
+  var g=$('#weaponGrid');
+  g.innerHTML=list.length?list.map(cardHTML).join(''):'<div class="empty" style="grid-column:1/-1">Tidak ada senjata yang cocok dengan filter atau pencarian. Coba hapus beberapa filter.</div>';
+  $('#resCount').textContent=list.length+' dari '+W.length+' senjata';
+  observeBars(g);
+  renderCombos();
+}
+
+/* ---------- Combo section ---------- */
+function renderCombos(){
+  var wp=$('#comboWeapons'),tb=$('#comboTabs'),out=$('#comboList'),note=$('#comboQNote');
+  var q=norm(S.q);
+  wp.innerHTML='';
+  W.forEach(function(w){
+    var b=document.createElement('button');b.type='button';b.className='chipbtn';b.setAttribute('role','tab');
+    b.textContent=w.emoji+' '+w.nama;b.setAttribute('aria-selected',String(!q&&S.cw===w.id));b.setAttribute('aria-pressed',String(!q&&S.cw===w.id));
+    b.disabled=!!q;b.style.opacity=q?.45:1;
+    b.addEventListener('click',function(){S.cw=w.id;renderCombos();});
+    wp.appendChild(b);
+  });
+  tb.innerHTML='';
+  [['semua','Semua'],['pemula','Pemula'],['standar','Standar'],['lanjutan','Lanjutan']].forEach(function(x){
+    var b=document.createElement('button');b.type='button';b.className='tab';b.setAttribute('role','tab');b.setAttribute('aria-selected',String(S.cl===x[0]));b.textContent=x[1];
+    b.addEventListener('click',function(){S.cl=x[0];renderCombos();});
+    tb.appendChild(b);
+  });
+  var list;
+  if(q){
+    list=[];W.forEach(function(w){w.combos.forEach(function(c){if(c.idx.indexOf(q)>=0||w.nama.toLowerCase().indexOf(q)>=0)list.push(c)})});
+    note.innerHTML='<div class="qnote"><span>Menampilkan hasil pencarian combo untuk <strong>"'+esc(S.q)+'"</strong> di semua senjata.</span><button class="chipbtn" type="button" id="qClear2">Hapus pencarian</button></div>';
+    var c2=$('#qClear2');if(c2)c2.addEventListener('click',clearSearch);
+  }else{
+    note.innerHTML='';
+    list=QMAP[S.cw].combos.slice();
+  }
+  if(S.cl!=='semua')list=list.filter(function(c){return c.lv===S.cl});
+  out.innerHTML=list.length?list.map(function(c){return comboHTML(c,!!q)}).join(''):'<div class="empty">Tidak ada combo pada tingkat ini'+(q?' untuk pencarian tersebut':' untuk senjata ini')+'.</div>';
+}
+
+/* ---------- Table ---------- */
+var COLS=[['nama','Senjata','t'],['tipe','Tipe','t'],['dmg','Damage','n'],['spd','Kecepatan','n'],['rng','Jangkauan','n'],['mob','Mobilitas','n'],['def','Pertahanan','n'],['eas','Kemudahan','n'],['lvl','Kesulitan','l'],['total','Total','n']];
+function valOf(w,k){if(k==='nama')return w.nama;if(k==='tipe')return w.tipe;if(k==='total')return w.total;if(k==='lvl')return Math.min.apply(null,w.levels.map(function(l){return LV_ORDER[l]}));return w.stats[k];}
+function heat(v){var h=Math.round(v*12);return 'hsl('+h+' 70% 62%)';} // 0->red, 10->~120 green
+function renderTable(){
+  var t=$('#cmpTable');
+  var rows=W.slice().sort(function(a,b){
+    var x=valOf(a,S.sk),y=valOf(b,S.sk);
+    if(typeof x==='string')return S.sd*x.localeCompare(y,'id');
+    return S.sd*(x-y)||a.nama.localeCompare(b.nama);
+  });
+  var head='<thead><tr>'+COLS.map(function(c){
+    var sorted=S.sk===c[0];
+    var as=sorted?(S.sd===1?'ascending':'descending'):'none';
+    var arrow=sorted?(S.sd===1?'▲':'▼'):'↕';
+    return '<th scope="col" aria-sort="'+as+'"><button type="button" data-k="'+c[0]+'">'+c[1]+' <span class="ar" aria-hidden="true">'+arrow+'</span></button></th>';
+  }).join('')+'</tr></thead>';
+  var body='<tbody>'+rows.map(function(w){
+    return '<tr><td><strong>'+w.emoji+' '+esc(w.nama)+'</strong></td><td>'+esc(w.tipe)+'</td>'
+     +['dmg','spd','rng','mob','def','eas'].map(function(k){var v=w.stats[k];return '<td><span class="cell" style="background:'+heat(v)+'">'+v+'</span></td>'}).join('')
+     +'<td>'+w.levels.map(function(l){return '<span class="pill lv-'+l+'">'+LV_LABEL[l]+'</span>'}).join(' ')+'</td><td><strong>'+w.total+'</strong></td></tr>';
+  }).join('')+'</tbody>';
+  t.innerHTML=head+body;
+  $$('thead button',t).forEach(function(b){b.addEventListener('click',function(){
+    var k=b.dataset.k;
+    if(S.sk===k){S.sd=-S.sd;}else{S.sk=k;S.sd=(k==='nama'||k==='tipe'||k==='lvl')?1:-1;}
+    renderTable();
+  });});
+}
+
+/* ---------- Compare ---------- */
+function fillSelects(){
+  ['selA','selB'].forEach(function(id){
+    var s=$('#'+id);s.innerHTML=W.map(function(w){return '<option value="'+w.id+'">'+w.emoji+' '+esc(w.nama)+'</option>'}).join('');
+  });
+  $('#selA').value=S.a;$('#selB').value=S.b;
+  $('#selA').addEventListener('change',function(e){S.a=e.target.value;renderCompare();});
+  $('#selB').addEventListener('change',function(e){S.b=e.target.value;renderCompare();});
+  $('#swapBtn').addEventListener('click',function(){var t=S.a;S.a=S.b;S.b=t;$('#selA').value=S.a;$('#selB').value=S.b;renderCompare();});
+}
+function renderCompare(){
+  var A=QMAP[S.a],B=QMAP[S.b];
+  function col(w,o){
+    return '<div class="cmp-col"><h4><span aria-hidden="true">'+w.emoji+'</span> '+esc(w.nama)+'</h4>'
+    +STAT_KEYS.map(function(k){var v=w.stats[k[0]],ov=o.stats[k[0]];var cls=v>ov?'win':(v<ov?'lose':'');
+      return '<div class="cmp-row '+cls+'"><span>'+k[1]+'</span><div class="bar" style="--v:'+v+'"><i></i></div><b>'+v+'</b></div>'}).join('')
+    +'<div class="cmp-info"><div><strong>Tipe:</strong> '+esc(w.tipe)+'</div><div><strong>Kesulitan:</strong> '+w.levels.map(function(l){return LV_LABEL[l]}).join(' / ')+'</div><div><strong>Peran:</strong> '+w.role.map(function(r){return ROLE_LABEL[r]}).join(', ')+'</div><div><strong>Total skor:</strong> '+w.total+'</div></div></div>';
+  }
+  $('#cmpOut').innerHTML=col(A,B)+col(B,A);
+  var diffs=[];
+  if(A.id===B.id){$('#cmpSum').innerHTML='<p style="margin:0">Pilih dua senjata berbeda untuk melihat perbandingan.</p>';}
+  else{
+    STAT_KEYS.forEach(function(k){var d=A.stats[k[0]]-B.stats[k[0]];if(d!==0)diffs.push((d>0?A.nama:B.nama)+' unggul di '+k[1].toLowerCase()+' (+'+Math.abs(d)+')');});
+    $('#cmpSum').innerHTML='<h4>Ringkasan '+esc(A.nama)+' vs '+esc(B.nama)+'</h4>'+(diffs.length?'<ul style="margin:0;padding-left:20px">'+diffs.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+'</ul>':'<p style="margin:0">Skor identik.</p>')+'<p class="statnote" style="margin:10px 0 0">Berdasarkan skor editorial, bukan data resmi '+VB+'</p>';
+  }
+  observeBars($('#cmpOut').parentNode);
+  // bars in re-rendered columns must animate each render
+  $$('#cmpOut .cmp-col').forEach(function(c){requestAnimationFrame(function(){requestAnimationFrame(function(){$$('.bar',c).forEach(function(b){b.classList.add('go')})})})});
+}
+
+/* ---------- Build / Picker / FAQ ---------- */
+function linkChips(ids){return ids.map(function(id){var w=QMAP[id];return '<a class="link-chip" href="#w-'+id+'" data-goto="'+id+'">'+w.emoji+' '+esc(w.nama)+'</a>'}).join('');}
+function renderBuild(){
+  $('#buildGrid').innerHTML=BUILD.map(function(b){
+    return '<div class="card bcard"><h4><span aria-hidden="true">'+b.e+'</span>'+esc(b.t)+'</h4><p>'+esc(b.txt)+(b.v?' '+VB:'')+'</p><div>'+linkChips(b.w)+'</div></div>';
+  }).join('');
+}
+function renderPicker(){
+  var p=$('#picker'),o=$('#pickerOut');
+  PICK.forEach(function(x){
+    var b=document.createElement('button');b.type='button';b.className='chipbtn';b.textContent=x.l;b.setAttribute('aria-pressed','false');
+    b.addEventListener('click',function(){
+      $$('button',p).forEach(function(z){z.setAttribute('aria-pressed','false')});b.setAttribute('aria-pressed','true');
+      o.innerHTML='<p style="margin:0 0 6px">'+esc(x.t)+'</p><div>'+linkChips(x.w)+'</div>';
+    });
+    p.appendChild(b);
+  });
+  o.innerHTML='<p style="margin:0;color:var(--muted)">Pilih salah satu preferensi di atas untuk melihat saran.</p>';
+}
+function renderFAQ(){
+  var f=$('#faqList');
+  f.innerHTML=FAQ.map(function(x,i){
+    return '<div class="qa"><button type="button" aria-expanded="false" aria-controls="ans'+i+'" id="q'+i+'">'+esc(x[0])+'</button><div class="ans" id="ans'+i+'" role="region" aria-labelledby="q'+i+'"><div><p>'+esc(x[1])+'</p></div></div></div>';
+  }).join('');
+  $$('.qa button',f).forEach(function(b){b.addEventListener('click',function(){
+    var open=b.getAttribute('aria-expanded')==='true';
+    b.setAttribute('aria-expanded',String(!open));b.parentNode.classList.toggle('open',!open);
+  });});
+}
+
+/* ---------- Search ---------- */
+function clearSearch(){S.q='';var i=$('#q');i.value='';$('#qClear').hidden=true;renderWeapons();}
+function initSearch(){
+  var i=$('#q'),t=null;
+  i.addEventListener('input',function(){
+    clearTimeout(t);t=setTimeout(function(){S.q=i.value.trim();$('#qClear').hidden=!S.q;renderWeapons();},120);
+  });
+  $('#qClear').addEventListener('click',clearSearch);
+}
+
+/* ---------- Actions delegated ---------- */
+function flash(el){el.classList.remove('flash');void el.offsetWidth;el.classList.add('flash');}
+function initActions(){
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('[data-act]');
+    if(b){
+      var id=b.dataset.id;
+      if(b.dataset.act==='combo'){
+        S.cw=id;S.cl='semua';
+        if(S.q){S.q='';$('#q').value='';$('#qClear').hidden=true;renderWeapons();}else{renderCombos();}
+        var el=$('#combo');if(el)el.scrollIntoView({behavior:'smooth',block:'start'});
+      }else if(b.dataset.act==='cmp'){
+        if(S.a===id){}else{S.b=S.a;S.a=id;}
+        $('#selA').value=S.a;$('#selB').value=S.b;renderCompare();
+        $('#perbandingan').scrollIntoView({behavior:'smooth',block:'start'});
+      }
+      return;
+    }
+    var g=e.target.closest('[data-goto]');
+    if(g){
+      e.preventDefault();
+      var id2=g.dataset.goto;
+      // ensure visible even if filtered
+      if(!$('#w-'+id2)){S.q='';S.lvl='semua';S.role='semua';$('#q').value='';$('#qClear').hidden=true;$$('#fLvl button,#fRole button').forEach(function(z){z.setAttribute('aria-pressed',z.dataset.v==='semua')});renderWeapons();}
+      var tgt=$('#w-'+id2);
+      if(tgt){tgt.scrollIntoView({behavior:'smooth',block:'start'});flash(tgt);}
+    }
+  });
+}
+
+/* ---------- Scrollspy / nav / top / theme ---------- */
+function initSpy(){
+  var links=$$('#navLinks a');
+  var secs=['pengantar','senjata','combo','perbandingan','build','faq'].map(function(id){return document.getElementById(id)}).filter(Boolean);
+  function setActive(id){links.forEach(function(a){var on=a.dataset.sec===id;a.classList.toggle('active',on);if(on){a.setAttribute('aria-current','true');var nl=$('#navLinks');var l=a.offsetLeft-nl.clientWidth/2+a.clientWidth/2;if(nl.scrollTo)nl.scrollTo({left:l,behavior:'smooth'});}else a.removeAttribute('aria-current');});}
+  if(!('IntersectionObserver' in window)){return;}
+  var vis={};
+  var o=new IntersectionObserver(function(es){
+    es.forEach(function(e){vis[e.target.id]=e.isIntersecting?e.intersectionRatio:0;});
+    var best=null,bv=0;secs.forEach(function(s){if((vis[s.id]||0)>bv){bv=vis[s.id];best=s.id;}});
+    if(best)setActive(best);
+    else if(window.scrollY<300)links.forEach(function(a){a.classList.remove('active');a.removeAttribute('aria-current')});
+  },{rootMargin:'-20% 0px -55% 0px',threshold:[0,.05,.1,.25,.5,.75,1]});
+  secs.forEach(function(s){o.observe(s)});
+}
+function initTop(){
+  var b=$('#toTop');
+  function chk(){b.classList.toggle('show',window.scrollY>600)}
+  window.addEventListener('scroll',chk,{passive:true});chk();
+  b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+}
+function initTheme(){
+  var btn=$('#themeBtn'),root=document.documentElement;
+  function sync(){var t=root.getAttribute('data-theme')||'dark';btn.textContent=t==='dark'?'🌙':'☀️';btn.setAttribute('aria-label',t==='dark'?'Beralih ke mode terang':'Beralih ke mode gelap');var m=$('meta[name=theme-color]');}
+  btn.addEventListener('click',function(){
+    var next=(root.getAttribute('data-theme')==='dark')?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('mho-theme',next);}catch(e){}
+    sync();
+  });
+  sync();
+}
+/* smooth-scroll fallback for hash links in nav/hero */
+function initAnchors(){
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a[href^="#"]');
+    if(!a||a.dataset.goto)return;
+    var id=a.getAttribute('href').slice(1);
+    if(!id)return;
+    var el=document.getElementById(id);
+    if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth',block:'start'});try{history.replaceState(null,'','#'+id)}catch(x){}}
+  });
+}
+
+/* ---------- Init ---------- */
+buildFilters();
+renderWeapons();
+renderTable();
+fillSelects();
+renderCompare();
+renderBuild();
+renderPicker();
+renderFAQ();
+initSearch();
+initActions();
+initAnchors();
+initSpy();
+initTop();
+initTheme();
+})();
+</script>
+</body>
+</html>
